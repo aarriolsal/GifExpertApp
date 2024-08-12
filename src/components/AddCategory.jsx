@@ -17,8 +17,9 @@ export const AddCategory = ({ handleNewCategory }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form data-testid="test-form" onSubmit={handleSubmit}>
       <input
+        data-testid="test-input"
         type="text"
         placeholder="Buscar gifs"
         value={inputValue}
@@ -29,5 +30,5 @@ export const AddCategory = ({ handleNewCategory }) => {
 };
 
 AddCategory.propTypes = {
-  handleNewCategory: PropTypes.func,
+  handleNewCategory: PropTypes.func.isRequired,
 };
